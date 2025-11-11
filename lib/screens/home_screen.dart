@@ -37,11 +37,11 @@ class _HomeScreenState extends State<HomeScreen> {
         body: selectedIndex == 0
             ? Column(
           children: [
-            _topHeader(home),   // ✅ Ab sirf Home me dikhenga
+            _topHeader(home),   // Ab sirf Home me dikhenga
             Expanded(child: _homeBody()),
           ],
         )
-            : screens[selectedIndex],   // ✅ Booking/Earning/Profile me header nahi aayega
+            : screens[selectedIndex],   // Booking/Earning/Profile me header nahi aayega
 
       ),
     );
@@ -189,7 +189,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
 
-  // ✅ HOME TAB BODY
+  // HOME TAB BODY
   Widget _homeBody() {
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16),
@@ -249,7 +249,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // ✅ BOTTOM NAVIGATION
+  // BOTTOM NAVIGATION
   Widget _bottomNavBar() {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
@@ -260,7 +260,7 @@ class _HomeScreenState extends State<HomeScreen> {
         BottomNavigationBarItem(icon: Icon(Icons.wallet), label: "Earning"),
         BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
       ],
-      selectedItemColor: Colors.purple,
+      selectedItemColor: Colors.blue,
       unselectedItemColor: Colors.grey,
       currentIndex: selectedIndex,
 
@@ -272,7 +272,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // ✅ TOP HEADER WIDGET
+  // TOP HEADER WIDGET
   Widget _topHeader(HomeProvider home) {
     return Container(
       padding: const EdgeInsets.all(20),
@@ -352,12 +352,13 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // ✅ EARNINGS SUMMARY BOX
+  // EARNINGS SUMMARY BOX
   Widget _earningsSummary() {
     return Container(
+
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Color(0xFFF1F4F9),
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
@@ -454,7 +455,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   }
 
-  // ✅ ACTIVITY ITEM WIDGET
+  // ACTIVITY ITEM WIDGET
   Widget _activityItem({
     required IconData icon,
     required Color color,
