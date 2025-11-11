@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'booking_details.dart';
 import 'bottom_item/booking_screen.dart';
 import 'bottom_item/earning_screen.dart';
 import 'bottom_item/profile_screen.dart';
@@ -21,16 +22,13 @@ class _HomeScreenState extends State<HomeScreen> {
     final home = Provider.of<HomeProvider>(context);
 
     final screens = [
-       Container(),            // Home tab ka content alag se aa raha hai
+       Container(),
       BookingScreen(),
       EarningScreen(),
       ProfileScreen(),
     ];
 
     return SafeArea(
-
-
-        // Color(0xff6737F7),
       child: Scaffold(
         backgroundColor: Colors.white,
         bottomNavigationBar: _bottomNavBar(),
@@ -172,9 +170,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.symmetric(
                       horizontal: 20, vertical: 10),
                 ),
-                child: const Text(
-                  "Start Job",
-                  style: TextStyle(color: Colors.white),
+                child: GestureDetector(
+                  onTap: (){
+                     Navigator.push(context, MaterialPageRoute(builder: (context)=> BookingDetailsScreen()));
+                    
+                  },
+                  child: Text(
+                    "Start Job",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
             ],

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:saaf_suthra/screens/LoginProvider.dart';
 import 'package:saaf_suthra/screens/home_provider.dart';
 import 'package:saaf_suthra/screens/home_screen.dart';
-import 'package:saaf_suthra/screens/login_screen.dart';
 import 'package:provider/provider.dart';
 void main() {
   runApp(
